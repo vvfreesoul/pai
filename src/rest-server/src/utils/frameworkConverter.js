@@ -88,7 +88,7 @@ const extractRuntimeOutput = (podCompletionStatus) => {
 };
 
 const generateExitDiagnostics = (diag) => {
-  logger.info('job diag');
+  logger.info('attempt diag');
   logger.info(diag);
   if (_.isEmpty(diag)) {
     return null;

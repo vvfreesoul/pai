@@ -266,6 +266,8 @@ const convertFrameworkDetail = async (framework) => {
 
   const completionStatus = attemptStatus.completionStatus;
   const diagnostics = completionStatus ? completionStatus.diagnostics : null;
+  logger.info('job generate');
+  logger.info(diagnostics);
   const exitDiagnostics = generateExitDiagnostics(diagnostics);
   const detail = {
     debugId: framework.metadata.name,
