@@ -60,6 +60,7 @@ if (launcherConfig.enabledJobHistory) {
         attributes: ['snapshot'],
         where: { name: encodedFrameworkName },
       });
+      logger.info(`attempt framework: ${framework}`);
     } catch (error) {
       logger.error(
         `error when getting framework from database: ${error.message}`,

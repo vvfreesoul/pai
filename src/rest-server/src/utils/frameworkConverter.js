@@ -182,6 +182,8 @@ const generateExitSpec = (code) => {
 };
 
 const convertToJobAttempt = async (framework) => {
+  logger.info('convertToJobAttempt');
+  logger.info(framework);
   if (framework.status === undefined) {
     framework.status = {
       attemptStatus: {
