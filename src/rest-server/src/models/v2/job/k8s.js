@@ -200,7 +200,10 @@ const convertTaskDetail = async (taskStatus, ports, logPathPrefix) => {
 
   const completionStatus = taskStatus.attemptStatus.completionStatus;
   const diagnostics = completionStatus ? completionStatus.diagnostics : null;
+  logger.info('task diag');
+  logger.info(diagnostics);
   const exitDiagnostics = generateExitDiagnostics(diagnostics);
+  logger.info(exitDiagnostics);
   return {
     taskIndex: taskStatus.index,
     taskState: convertState(
@@ -269,6 +272,7 @@ const convertFrameworkDetail = async (framework) => {
   logger.info('job generate');
   logger.info(diagnostics);
   const exitDiagnostics = generateExitDiagnostics(diagnostics);
+  logger.info(exitDiagnostics);
   const detail = {
     debugId: framework.metadata.name,
     name: jobName,
