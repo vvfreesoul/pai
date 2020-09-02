@@ -1147,6 +1147,8 @@ const generateExitDiagnostics = (diag) => {
     return null;
   }
 
+  logger.info('job diag');
+  logger.info(diag);
   const exitDiagnostics = {
     diagnosticsSummary: diag,
     runtime: null,
@@ -1184,6 +1186,7 @@ const generateExitDiagnostics = (diag) => {
 };
 
 const extractRuntimeOutput = (podCompletionStatus) => {
+  logger.info('job extractRuntimeOutput');
   if (!podCompletionStatus || !Array.isArray(podCompletionStatus.containers)) {
     return null;
   }
