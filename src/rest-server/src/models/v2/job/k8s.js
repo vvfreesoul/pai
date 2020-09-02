@@ -1188,6 +1188,8 @@ const extractRuntimeOutput = (podCompletionStatus) => {
     return null;
   }
 
+  logger.info('job podCompletionStatus');
+  logger.info(podCompletionStatus);
   let res = null;
   for (const container of podCompletionStatus.containers) {
     if (container.code <= 0) {

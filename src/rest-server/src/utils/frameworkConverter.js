@@ -53,6 +53,8 @@ const extractRuntimeOutput = (podCompletionStatus) => {
   if (_.isEmpty(podCompletionStatus)) {
     return null;
   }
+  logger.info('attempt podCompletionStatus');
+  logger.info(podCompletionStatus);
 
   let res = null;
   for (const container of podCompletionStatus.containers) {
@@ -182,8 +184,6 @@ const generateExitSpec = (code) => {
 };
 
 const convertToJobAttempt = async (framework) => {
-  logger.info('convertToJobAttempt');
-  logger.info(framework);
   if (framework.status === undefined) {
     framework.status = {
       attemptStatus: {
