@@ -134,6 +134,7 @@ spec:
           value: {{ cluster_cfg['database-controller']['write-merger-url'] }}
         ports:
         - name: rest-server
+          containerPort: 9186
           hostPort: {{ cluster_cfg['rest-server']['server-port'] }}
         {%- if cluster_cfg['cluster']['common']['qos-switch'] == "true" %}
         resources:
