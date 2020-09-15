@@ -28,7 +28,7 @@ spec:
       labels:
         app: pylon
     spec:
-      hostNetwork: false
+      hostNetwork: true
       hostPID: false
       containers:
         - name: pylon
