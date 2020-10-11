@@ -50,6 +50,16 @@ export const getAllUsersRequest = async () => {
   });
 };
 
+export const getAllUserRequestsRequest = async () => {
+  const url = `${config.restServerUri}/api/v2/requests`;
+  const token = checkToken();
+  return fetchWrapper(url, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};
+
 export const removeUserRequest = async username => {
   const url = `${config.restServerUri}/api/v2/user/${username}`;
   const token = checkToken();

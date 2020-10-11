@@ -227,10 +227,6 @@ const Sidebar = ({ className, style }) => {
                     name: 'User Management',
                     url: '/user-view.html',
                     key: KEY_USER_MANAGEMENT,
-                    style: {
-                      display:
-                        config.authnMethod !== 'OIDC' ? undefined : 'none',
-                    },
                     icon: 'PlayerSettings',
                   },
                 ],
