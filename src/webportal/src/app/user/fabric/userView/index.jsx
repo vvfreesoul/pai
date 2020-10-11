@@ -3,9 +3,9 @@
 
 import React from 'react';
 
-import { Label } from 'office-ui-fabric-react/lib/Label';
 import { Pivot, PivotItem } from 'office-ui-fabric-react/lib/Pivot';
 import UserList from './UserList';
+import UserRequests from './UserRequests/UserRequests';
 
 export default function UserView() {
   return (
@@ -14,7 +14,7 @@ export default function UserView() {
         <UserList />
       </PivotItem>
       <PivotItem headerText='Pending list'>
-        <Label>Pivot #2</Label>
+        <UserRequests />
       </PivotItem>
     </Pivot>
   );

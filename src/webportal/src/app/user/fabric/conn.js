@@ -50,16 +50,6 @@ export const getAllUsersRequest = async () => {
   });
 };
 
-export const getAllUserRequestsRequest = async () => {
-  const url = `${config.restServerUri}/api/v2/requests`;
-  const token = checkToken();
-  return fetchWrapper(url, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
-};
-
 export const removeUserRequest = async username => {
   const url = `${config.restServerUri}/api/v2/user/${username}`;
   const token = checkToken();
@@ -164,6 +154,40 @@ export const getUserRequest = async username => {
     },
   });
 };
+
+export const getAllUserRequestsRequest = async () => {
+  const url = `${config.restServerUri}/api/v2/requests/user`;
+  const token = checkToken();
+  const res = await fetchWrapper(url, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return res.requests;
+};
+
+export const removeUserRequestRequest = async requestId => {
+  const url = `${config.restServerUri}/api/v2/requests/user/${requestId}`;
+  const token = checkToken();
+  return fetchWrapper(url, {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};
+
+export const updateUserRequestStateRequest = async (requestId, state) => {
+  const url = `${config.restServerUri}/api/v2/requests/user/${requestId}`;
+  const token = checkToken();
+  return fetchWrapper(url, {
+    method: 'PUT',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ state }),
+  });
+}
 
 export const getTokenRequest = async () => {
   return wrapper(() => client.token.getTokens());
