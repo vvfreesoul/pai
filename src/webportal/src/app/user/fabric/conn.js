@@ -187,7 +187,7 @@ export const updateUserRequestStateRequest = async (requestId, state) => {
     },
     body: JSON.stringify({ state }),
   });
-}
+};
 
 export const getTokenRequest = async () => {
   return wrapper(() => client.token.getTokens());
