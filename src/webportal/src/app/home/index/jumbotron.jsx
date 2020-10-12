@@ -16,7 +16,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import { FontClassNames, ColorClassNames } from '@uifabric/styling';
-import { PrimaryButton } from 'office-ui-fabric-react';
+import { PrimaryButton, DefaultButton } from 'office-ui-fabric-react';
 import MediaQuery from 'react-responsive';
 import c from 'classnames';
 import PropTypes from 'prop-types';
@@ -71,11 +71,18 @@ const Jumbotron = ({ showLoginModal }) => (
             extend and supports on-premise, cloud and hybrid environments in
             various scale.
           </div>
-          <PrimaryButton
-            styles={{ root: { maxWidth: '6rem' } }}
-            text='Sign in'
-            onClick={showLoginModal}
-          />
+          <div className={c(t.flex)}>
+            <PrimaryButton
+              styles={{ root: { maxWidth: '6rem' } }}
+              text='Sign in'
+              onClick={showLoginModal}
+            />
+            <DefaultButton
+              styles={{ root: { maxWidth: '6rem', marginLeft: '10px' } }}
+              text='Sign up'
+              onClick={showLoginModal}
+            />
+          </div>
         </div>
         <SignInBackground style={{ maxWidth: '28rem', minWidth: '25rem' }} />
       </div>
