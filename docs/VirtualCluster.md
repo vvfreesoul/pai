@@ -12,5 +12,3 @@ It lists all VCs and the corresponding sub clusters where the VC locates. After 
     * For each partition, expand the detail list and look for more detailed info. 
 * click **View Jobs** link for the jobs running under this virtual cluster.
 * click **Historical resource usage** link for resource usage in MDM counter.
-
-![VC_Overview_BETA](./images/VC_OVERVIEW.PNG) 
