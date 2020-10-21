@@ -40,7 +40,6 @@ After login, choose a **sub-cluster** with which you'd like to manage jobs. Curr
 ### - My Job Overview - **Home** page
 **Home** page provides overview of your jobs for all your virtual clusters.
 
-![Main_Page_BETA](./images/MAIN_PAGE.png)
 
 ### - View Jobs Details
 In **Jobs** page, you can
@@ -62,7 +61,6 @@ Here is the place where you can manage job modules and use them to submit job. C
 ### - View Virtual Clusters
 This is where virtual cluster management happens. Currently, it is for view only. All users authorized in the sub-clusters can view status and usage of virtual clusters in selected sub-cluster. For more info, please refer to [VirtualCluster](./VirtualCluster.md).
 
-![Virtual_Clusters_BETA](./images/VC_OVERVIEW.PNG)
 
 
 <a name="HowTo" id = "HowTo"></a>
